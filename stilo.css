@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #476394 0%, #2a5298 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1430px;
+    /* Aumentei um pouco o máximo para dar mais respiro */
+    display: grid;
+    /* 0.7fr para a calculadora e 1.3fr para os registros */
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 30px;
+    align-items: start;
+    /* Faz com que os cards não estiquem verticalmente sem necessidade */
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+form,
+.lista-container {
+    background: rgba(134, 156, 237, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    border: 15px solid rgba(116, 103, 214, 0.5);
+}
+
+
+h2 {
+    margin-top: 0;
+    color: #402E7A;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d3c6ff;
+    padding-bottom: 10px;
+}
+
+
+#titulos {
+    display: flex;
+}
+
+#titulo1 {
+    margin-left: 3.5rem;
+    margin-top: 0;
+    color: #402E7A;
+    font-size: 1.5rem;
+}
+
+#titulo2 {
+    margin-top: 0;
+    margin-left: 1rem;
+    color: #46db6b;
+    font-size: 1.5rem;
+}
+
+#titulos2 {
+    margin-left: -211px;
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#titulo3 {
+    margin-top: 0;
+    color: #342958;
+    font-size: 1.2rem;
+}
+
+#linha {
+    border-bottom: 2px solid #d3c6ff;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+#valorTotalTitulo {
+    color: #00ca5b;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Botões Gerais */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-secundario {
+    background: #6c757d;
+}
+
+/* Botões de Ação no Card */
+.acoes {
+    display: flex;
+    flex-direction: row;
+    /* Lado a lado */
+    gap: 8px;
+    /* Espaçamento entre eles */
+    justify-content: flex-end;
+}
+
+.btn-editar,
+.btn-excluir {
+    width: auto;
+    /* Deixa o botão ajustar ao texto ou define um fixo menor */
+    min-width: 70px;
+    padding: 8px 12px;
+}
+
+.btn-editar {
+    background: #007bff;
+}
+
+/* Azul */
+.btn-excluir {
+    background: #dc3545;
+}
+
+/* Vermelho */
+
+.produto-card {
+    background: rgb(201, 239, 251);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #1e3c72;
+}
+
+#statusMsg {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #1e3c72;
+    min-height: 20px;
+}
+
+.produto-imagem {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #1e3c72;
+    display: block;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-48px) scale(0.8);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-29px) scale(0.9);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-6px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 150px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -25px;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 20px;
+    }
+
+}

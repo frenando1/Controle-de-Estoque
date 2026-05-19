@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMaster Cloud</title>
+    <link rel="stylesheet" href="stilo.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="meuForm">
+            <div id="linha">
+
+                <div id="titulos">
+                    <h1 id="titulo1">StockMaster</h1>
+                    <h1 id="titulo2">Cloud</h1>
+                    <div id="titulos2">
+                        <h1 id="titulo3">Controle de Estoque</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="nome">Nome do Produto</label>
+                <input type="text" id="nome" placeholder="Nome do Produto" required>
+            </div>
+
+            <div class="grid-produtos">
+                <div class="input-group">
+                    <label>Quantidade em Estoque</label>
+                    <input type="number" id="quantidade" step="1" required>
+                </div>
+                <div class="input-group">
+                    <label>Preço Unitário</label>
+                    <input type="number" id="preco" step="0.1" required>
+                </div>
+                <div class="input-group">
+                    <label id="valorTotalTitulo">valor total</label>
+                    <input type="number" id="valorTotal" step="0.1" readonly placeholder="Calculado auto.">
+                </div>
+                <div class="input-group">
+                    <label>Categoria</label>
+                    <select id="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Alimentos Congelados">Alimentos Congelados</option>
+                        <option value="Alimentos Industriais">Alimentos Industriais</option>
+                        <option value="Alimentos Perecíveis">Alimentos Perecíveis</option>
+                        <option value="Alimentos Não Perecíveis">Alimentos Não Perecíveis</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Bebidas Alcoólicas">Bebidas Alcoólicas</option>
+                        <option value="Bebidas Não Alcoólicas">Bebidas Não Alcoólicas</option>
+                        <option value="Limpeza">Limpeza</option>
+                        <option value="Limpeza Doméstica">Limpeza Doméstica</option>
+                        <option value="Limpeza Automotiva">Limpeza Automotiva</option>
+                        <option value="Higiene">Higiene</option>
+                        <option value="Higiene Pessoal">Higiene Pessoal</option>
+                        <option value="Higiene Bucal">Higiene Bucal</option>
+                        <option value="Cosméticos">Cosméticos</option>
+                        <option value="Cosméticos Capilares">Cosméticos Capilares</option>
+                        <option value="Cosméticos Faciais">Cosméticos Faciais</option>
+                        <option value="Cosméticos Corporais">Cosméticos Corporais</option>
+                        <option value="Perfumaria">Perfumaria</option>
+                        <option value="Vestuário">Vestuário</option>
+                        <option value="Vestuário Masculino">Vestuário Masculino</option>
+                        <option value="Vestuário Feminino">Vestuário Feminino</option>
+                        <option value="Vestuário Infantil">Vestuário Infantil</option>
+                        <option value="Calçados">Calçados</option>
+                        <option value="Calçados Masculinos">Calçados Masculinos</option>
+                        <option value="Calçados Femininos">Calçados Femininos</option>
+                        <option value="Calçados Infantis">Calçados Infantis</option>
+                        <option value="Acessórios">Acessórios</option>
+                        <option value="Acessórios de Moda">Acessórios de Moda</option>
+                        <option value="Acessórios Automotivos">Acessórios Automotivos</option>
+                        <option value="Eletrônicos">Eletrônicos</option>
+                        <option value="Eletrodomésticos">Eletrodomésticos</option>
+                        <option value="Eletroportáteis">Eletroportáteis</option>
+                        <option value="Informática">Informática</option>
+                        <option value="Telefonia">Telefonia</option>
+                        <option value="Áudio e Vídeo">Áudio e Vídeo</option>
+                        <option value="Ferramentas">Ferramentas</option>
+                        <option value="Ferramentas Elétricas">Ferramentas Elétricas</option>
+                        <option value="Ferramentas Manuais">Ferramentas Manuais</option>
+                        <option value="Ferramentas de Jardim">Ferramentas de Jardim</option>
+                        <option value="Material de Construção">Material de Construção</option>
+                        <option value="Elétrica">Elétrica</option>
+                        <option value="Hidráulica">Hidráulica</option>
+                        <option value="Tintas">Tintas</option>
+                        <option value="Automotivo">Automotivo</option>
+                        <option value="Peças Automotivas">Peças Automotivas</option>
+                        <option value="Papelaria">Papelaria</option>
+                        <option value="Material Escolar">Material Escolar</option>
+                        <option value="Livros">Livros</option>
+                        <option value="Revistas">Revistas</option>
+                        <option value="Brinquedos">Brinquedos</option>
+                        <option value="Jogos">Jogos</option>
+                        <option value="Esportes">Esportes</option>
+                        <option value="Esportes de Academia">Esportes de Academia</option>
+                        <option value="Esportes ao Ar Livre">Esportes ao Ar Livre</option>
+                        <option value="Equipamentos Esportivos">Equipamentos Esportivos</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Medicamentos">Medicamentos</option>
+                        <option value="Suplementos">Suplementos</option>
+                        <option value="Fitoterápicos">Fitoterápicos</option>
+                        <option value="Produtos Naturais">Produtos Naturais</option>
+                        <option value="Pet Shop">Pet Shop</option>
+                        <option value="Alimentação Pet">Alimentação Pet</option>
+                        <option value="Acessórios Pet">Acessórios Pet</option>
+                        <option value="Jardinagem">Jardinagem</option>
+                        <option value="Plantas">Plantas</option>
+                        <option value="Sementes">Sementes</option>
+                        <option value="Vasos e Acessórios">Vasos e Acessórios</option>
+                        <option value="Decoração">Decoração</option>
+                        <option value="Móveis">Móveis</option>
+                        <option value="Móveis para Sala">Móveis para Sala</option>
+                        <option value="Móveis para Quarto">Móveis para Quarto</option>
+                        <option value="Móveis para Cozinha">Móveis para Cozinha</option>
+                        <option value="Móveis para Escritório">Móveis para Escritório</option>
+                        <option value="Utensílios Domésticos">Utensílios Domésticos</option>
+                        <option value="Cama, Mesa e Banho">Cama, Mesa e Banho</option>
+                        <option value="Cozinha">Cozinha</option>
+                        <option value="Mercearia">Mercearia</option>
+                        <option value="Hortifrúti">Hortifrúti</option>
+                        <option value="Carnes">Carnes</option>
+                        <option value="Laticínios">Laticínios</option>
+                        <option value="Padaria">Padaria</option>
+                        <option value="Congelados">Congelados</option>
+                        <option value="Artigos de Festa">Artigos de Festa</option>
+                        <option value="Artigos de Natal">Artigos de Natal</option>
+                        <option value="Artigos Religiosos">Artigos Religiosos</option>
+                        <option value="Música">Música</option>
+                        <option value="Instrumentos Musicais">Instrumentos Musicais</option>
+                        <option value="Malas e Mochilas">Malas e Mochilas</option>
+                        <option value="Relojoaria">Relojoaria</option>
+                        <option value="Óptica">Óptica</option>
+                        <option value="Armarinho">Armarinho</option>
+                        <option value="Avicultura">Avicultura</option>
+                        <option value="Agropecuária">Agropecuária</option>
+                        <option value="Aquicultura">Aquicultura</option>
+                        <option value="Defensivos Agrícolas">Defensivos Agrícolas</option>
+                        <option value="Embalagens">Embalagens</option>
+                        <option value="Descartáveis">Descartáveis</option>
+                        <option value="Material Médico">Material Médico</option>
+                        <option value="Material Hospitalar">Material Hospitalar</option>
+                        <option value="EPI">EPI (Equip. Proteção Individual)</option>
+                        <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>URL da Imagem (Link)</label>
+                    <input type="text" id="urlImagem" placeholder="https://exemplo.com/imagem.jpg">
+                </div>
+            </div>
+
+            <button type="submit" id="btnSalvar">Produtos e Salvar</button>
+            <button type="button" onclick="apagarCampos()" class="btn-secundario">Limpar Campos</button>
+
+            <p id="statusMsg"></p>
+        </form>
+        <section class="lista-container">
+            <h2>Registros Salvos</h2>
+            <div id="listaProdutos"></div>
+        </section>
+    </div>
+</body>
+
+</html>
