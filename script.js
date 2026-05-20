@@ -23,6 +23,29 @@ QuantidadeInput.addEventListener('input', valorTotalNaTela);
 PrecoInput.addEventListener('input', valorTotalNaTela);
 
 /**
+ * 0. VERIFICAR PRODUTO DUPLICADO
+ */
+async function verificarProdutoDuplicado(nome) {
+    try {
+        const response = await fetch(
+            `${SUPABASE_URL}/rest/v1/produtos?nome=eq.${encodeURIComponent(nome)}&select=id`,
+            {
+                method: 'GET',
+                headers: {
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`
+                }
+            }
+        );
+        const dados = await response.json();
+        return dados.length > 0 ? dados[0] : null;
+    } catch (error) {
+        console.error("Erro ao verificar duplicado:", error);
+        return null;
+    }
+}
+
+/**
  * 1. CARREGAR REGISTROS
  */
 async function carregarRegistros() {
@@ -88,12 +111,23 @@ form.addEventListener('submit', async (e) => {
 
     const valor_total = (Quantidade * Preco);
 
-    const metodo = idEdicao ? 'PATCH' : 'POST';
-    const url = idEdicao
+    let metodo = idEdicao ? 'PATCH' : 'POST';
+    let url = idEdicao
         ? `${SUPABASE_URL}/rest/v1/produtos?id=eq.${idEdicao}`
         : `${SUPABASE_URL}/rest/v1/produtos`;
 
-    statusMsg.textContent = "Processando...";
+    if (!idEdicao) {
+        const duplicado = await verificarProdutoDuplicado(nome);
+        if (duplicado) {
+            metodo = 'PATCH';
+            url = `${SUPABASE_URL}/rest/v1/produtos?id=eq.${duplicado.id}`;
+            statusMsg.textContent = "Produto duplicado encontrado. Atualizando...";
+        }
+    }
+
+    if (metodo === 'POST') {
+        statusMsg.textContent = "Processando...";
+    }
 
     try {
         const response = await fetch(url, {
