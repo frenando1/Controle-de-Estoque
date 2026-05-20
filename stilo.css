@@ -195,14 +195,14 @@ button:hover {
     display: block;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 375px) {
+@media only screen and (min-width: 240px) and (max-width: 319px) {
 
     #linha {
         display: flex;
     }
 
     .container {
-        transform: translateX(-48px) scale(0.8);
+        transform: translateX(-45px) scale(0.75);
     }
 
     #titulos {
@@ -213,7 +213,61 @@ button:hover {
 
 }
 
-@media only screen and (min-width: 375px) and (max-width: 425px) {
+@media only screen and (min-width: 319px) and (max-width: 344px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-45px) scale(0.75);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 344px) and (max-width: 360px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-38px) scale(0.8);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 375px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-32px) scale(0.8);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 384px) {
 
     #linha {
         display: flex;
@@ -231,7 +285,98 @@ button:hover {
 
 }
 
-@media only screen and (min-width: 425px) and (max-width: 768px) {
+@media only screen and (min-width: 384px) and (max-width: 390px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-25px) scale(0.9);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 390px) and (max-width: 411px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-21px) scale(0.9);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 411px) and (max-width: 412px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-12px) scale(0.9);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 412px) and (max-width: 414px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-13px) scale(1);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 414px) and (max-width: 425px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-12px) scale(1);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 425px) and (max-width: 430px) {
 
     #linha {
         display: flex;
@@ -249,7 +394,115 @@ button:hover {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 430px) and (max-width: 480px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(-6px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 540px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 0px;
+    }
+
+
+}
+
+@media only screen and (min-width: 540px) and (max-width: 600px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 22px;
+    }
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 640px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 60px;
+    }
+
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 712px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 80px;
+    }
+
+
+}
+
+@media only screen and (min-width: 712px) and (max-width: 767px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: 120px;
+    }
+
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 769px) {
 
     #linha {
         display: flex;
@@ -266,7 +519,24 @@ button:hover {
 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -20px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
 
     #linha {
         display: flex;
@@ -279,6 +549,23 @@ button:hover {
     #titulos {
         display: flex;
         margin-left: -25px;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+
+    #linha {
+        display: flex;
+    }
+
+    .container {
+        transform: translateX(0px);
+    }
+
+    #titulos {
+        display: flex;
+        margin-left: -10px;
     }
 
 }

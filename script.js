@@ -13,7 +13,7 @@ function valorTotalNaTela() {
     const Quantidade = parseFloat(document.querySelector('#quantidade').value);
     const Preco = parseFloat(document.querySelector('#preco').value);
 
-    valorTotal.value=(Quantidade * Preco).toFixed(2);
+    valorTotal.value = (Quantidade * Preco).toFixed(2);
 }
 
 const QuantidadeInput = document.querySelector('#quantidade');
@@ -137,7 +137,7 @@ window.prepararEdicao = function (id, nome, quantidade, preco, valor_total, cate
     document.querySelector('#preco').value = preco;
     document.querySelector('#categoria').value = categoria;
     document.querySelector('#urlImagem').value = url_imagem || '';
-    document.querySelector('#valorTotal').value = valorTotal|| '';
+    document.querySelector('#valorTotal').value = valorTotal || '';
 
     btnSalvar.textContent = "Atualizar Dados";
     btnSalvar.style.backgroundColor = "#ffc107"; // Amarelo para indicar edição
